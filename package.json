@@ -12,10 +12,11 @@
   },
   "scripts": {
     "start": "node server.js",
-    "server": "json-server --watch db.json -p 4000",
+    "server": "json-server --watch db.json --port 4000",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"npm run server\" \"npm run start\""
   },
   "eslintConfig": {
     "extends": [
@@ -41,4 +42,5 @@
     "msw": "^0.44.2",
     "react-test-renderer": "^18.2.0"
   }
+  
 }
