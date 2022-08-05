@@ -16,13 +16,13 @@ function App() {
 
   console.log(numbers)
 
-function handleAddPlants(newnumber){
+function handleAddNumbers(newnumber){
   setNumbers([...numbers, newnumber])
 }
   return (
     <div data-testid="passed-data" className="app">
       <Header/>
-      <NumberPage  numList={numbers} handleAddPlants={handleAddPlants}/>
+      <NumberPage  numList={numbers} handleAddNumbers={handleAddNumbers}/>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 
-function NumberForm ({handleAddPlants}) {
+function NumberForm ({handleAddNumbers}) {
    const[firstnum, setFirstnum]=useState("")
    
    const[secondnum, setSecondnum]=useState("")
-  // const[submitData, setSubmitdata]=useState([])
+ 
 
    function handleNumone(event){
      setFirstnum(event.target.value)
@@ -29,17 +29,17 @@ function NumberForm ({handleAddPlants}) {
 
     })
     .then(r=>r.json())
-    .then((newPlant)=>{
-      handleAddPlants(newPlant);
+    .then((num)=>{
+      handleAddNumbers(num);
     })
   }
 
   return (
-    <div className="new-plant-form">
+    <div className="new-num-form">
       <h2>Submit Two Numbers</h2>
       <form onSubmit={handleSubmit}>
-        <input onChange={handleNumone} value={firstnum} type="number" name="name" placeholder="first number" />
-        <input onChange={handleNumtwo} value={secondnum} type="number" name="price"  placeholder="second number" />
+        <input onChange={handleNumone} value={firstnum} type="number" name="num1" placeholder="first number" />
+        <input onChange={handleNumtwo} value={secondnum} type="number" name="num2"  placeholder="second number" />
         <button type="submit">Add</button>
       </form>
     </div>
@@ -48,16 +48,3 @@ function NumberForm ({handleAddPlants}) {
 
 export default NumberForm;
 
-// function handleSubmit(event){
-//   event.preventDefault(); 
-//   fetch("http://localhost:6001/plants", {
-//    method: "POST",
-//    headers: {
-//      "Content-Type": "application/json",
-//    },
-//    body: JSON.stringify({
-//        name,
-//        image, 
-//        price
-//    }),
-//   })

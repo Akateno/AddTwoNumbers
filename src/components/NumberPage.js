@@ -3,11 +3,11 @@ import NumberForm from "./NumberForm";
 import NumberList from "./NumberList";
 
 
-function NumberPage({numList, handleAddPlants}) {
+function NumberPage({numList, handleAddNumbers}) {
 
   return (
     <main>
-      <NumberForm handleAddPlants={handleAddPlants}/>
+      <NumberForm handleAddNumbers={handleAddNumbers}/>
       <NumberList numList={numList}/>
     </main>
   );
