@@ -1,7 +1,5 @@
 {
   "numbers": [
-    
-    
     {
       "firstnum": "1",
       "secondnum": "1",
@@ -21,6 +19,11 @@
       "firstnum": "4",
       "secondnum": "4",
       "id": 16
+    },
+    {
+      "firstnum": "2",
+      "secondnum": "2",
+      "id": 17
     }
   ]
 }
