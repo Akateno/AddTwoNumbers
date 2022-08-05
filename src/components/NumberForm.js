@@ -16,7 +16,7 @@ function NumberForm ({handleAddNumbers}) {
 
   const handleSubmit = (e)=> {
     e.preventDefault();
-    fetch("http://localhost:6001/numbers", {
+    fetch("http://localhost:4000/numbers", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",

@@ -9,7 +9,7 @@ function App() {
   
 
   useEffect(()=>{
-    fetch("http://localhost:6001/numbers")
+    fetch("http://localhost:4000/numbers")
     .then((r)=>r.json())
     .then((data)=>setNumbers(data))
   }, [])
